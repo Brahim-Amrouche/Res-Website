@@ -1,0 +1,825 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-overflow: ellipsis;
+}
+
+body {
+  z-index: -10;
+  height: auto;
+  width: 100%;
+}
+
+.product-display {
+  position: relative;
+  width: 100%;
+  top: 100vh;
+  height: 183.7vh;
+}
+
+.service-display {
+  position: relative;
+  width: 100%;
+  top: 100vh;
+  height: 183.7vh;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-brand {
+  position: relative;
+  background: #ec4646;
+  width: 10vw;
+  height: 3vw;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3vw;
+  font-size: 1.5vw;
+  font-family: "montserrat";
+  z-index: 1;
+}
+
+.nav-list {
+  position: relative;
+  right: 0;
+  height: 4vw;
+  width: 35vw;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0.05vw solid #51c2d5;
+  background: none;
+  font-family: "montserrat";
+  font-weight: bold;
+  font-size: 0.8vw;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+  overflow: hidden;
+}
+
+.nav-list a:hover {
+  color: #51c2d5;
+}
+
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #51c2d5;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  top: 0;
+}
+
+.nav-list a:hover::before {
+  height: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.nav-list li {
+  position: relative;
+  width: 6vw;
+  height: 2vw;
+  top: 0.5rem;
+  z-index: 11;
+  text-align: center;
+  line-height: 2vw;
+}
+
+.login {
+  width: 7vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  color: white;
+  background: #663f3f;
+  z-index: 1;
+  font-family: "montserrat" , "sans-serif";
+  font-weight: bold;
+}
+
+.login .login-icon {
+  display: block;
+  background: none;
+  width: 100%;
+  height: 3vw;
+  border: none;
+  cursor: pointer;
+  font-size: 1vw;
+  font-family: "montserrat";
+}
+
+.login form {
+  position: absolute;
+  right: 0;
+  width: 20vw;
+  color: black;
+  background: #66403f;
+}
+
+.login form .data-entry {
+  display: block;
+  margin-top: 0rem;
+  margin-right: 12vw;
+}
+
+.login form label {
+  color: #fff;
+  font-size: 1vw;
+}
+
+.login form #keep {
+  color: #fff;
+  margin-right: 5vw;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.login form #submit {
+  width: 15vw;
+  height: 2vw;
+  background: #fff;
+  margin-bottom: 1rem;
+  color: #ec4646;
+}
+
+.login .data {
+  width: 18vw;
+  height: 2vw;
+}
+
+.btn, .login form #submit {
+  border: 0.1vw solid #ec4646;
+  font-family: "montserrat";
+  font-weight: bold;
+  font-size: 1vw;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.btn:hover, .login form #submit:hover {
+  color: #fff;
+  background: #ec4646;
+}
+
+.display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background-video-1 {
+  position: absolute;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  width: 50vw;
+  height: 101vh;
+}
+
+#background-video-2 {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  width: 50vw;
+  height: 101vh;
+}
+
+#description {
+  position: absolute;
+  top: 6rem;
+  left: 10vw;
+  width: 80vw;
+  height: 10vw;
+  text-align: center;
+  background: #51c2d5;
+}
+
+#description h1 {
+  text-transform: capitalize;
+  font-size: 2.9vw;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+#description h1 span {
+  font-size: 2.2vw;
+}
+
+#buy-products {
+  position: absolute;
+  top: 60vh;
+  left: 25vw;
+  z-index: 10;
+  width: 25vw;
+  height: 6vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#buy-products a {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 5.5vw;
+  font-size: 1.2vw;
+  border: 0.1vw solid #ec4646;
+}
+
+#buy-products a:hover {
+  color: #ec4646;
+}
+
+#buy-products a::before {
+  background: #ec4646;
+}
+
+#buy-products a:hover::before {
+  left: 100%;
+  width: 0;
+  border-radius: 0 0 0 0;
+}
+
+#buy-services {
+  position: absolute;
+  top: 60vh;
+  left: 75vw;
+  z-index: 10;
+  width: 25vw;
+  height: 6vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#buy-services a {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.2vw;
+  line-height: 5.5vw;
+  border: 0.1vw solid #663f3f;
+}
+
+#buy-services a:hover {
+  color: #663f3f;
+}
+
+#buy-services a::before {
+  background: #663f3f;
+}
+
+#buy-services a:hover::before {
+  width: 0;
+  border-radius: 0 0 0 0;
+}
+
+.btn-2, #buy-products a, #buy-services a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  font-weight: bold;
+  color: #f2eaec;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: 3s all;
+  transition: 3s all;
+}
+
+.btn-2::before, #buy-products a::before, #buy-services a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  top: 0;
+}
+
+.Products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(#ec4646), to(rgba(236, 70, 70, 0.4)));
+  background: linear-gradient(to right, #ec4646, rgba(236, 70, 70, 0.4));
+  height: 183.8vh;
+}
+
+.colorfull-product {
+  background: -webkit-gradient(linear, left top, right top, from(#663f3f), to(rgba(102, 63, 63, 0.8)));
+  background: linear-gradient(to right, #663f3f, rgba(102, 63, 63, 0.8));
+  width: 100%;
+  height: 10vw;
+}
+
+.product-style {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60vw;
+  height: 14vw;
+  left: 12.5vw;
+  margin: 1vw 0 2vw 0;
+  background: #bbf1fa;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6vw;
+}
+
+.product-style img {
+  position: relative;
+  border-radius: 6vw;
+  width: 20vw;
+  height: 14vw;
+  padding: 0;
+  margin: 0;
+}
+
+.product-detail {
+  position: relative;
+  left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30vw;
+  height: 14vw;
+  overflow: hidden;
+}
+
+.product-detail h1 {
+  position: relative;
+  height: 2.5vw;
+  width: 30vw;
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  font-family: "montserrat";
+  color: #fff;
+  background: #ec4646;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-detail p {
+  position: relative;
+  height: 20vh;
+  margin-top: 1vw;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  color: #663f3f;
+  overflow: hidden;
+  font-size: 1vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-buy {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  left: 65vw;
+}
+
+.product-buy a {
+  display: block;
+  text-align: center;
+  width: 10vw;
+  height: 10vw;
+  line-height: 10vw;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2vw;
+  color: #000;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bbf1fa), to(rgba(187, 241, 250, 0.3)));
+  background: linear-gradient(to bottom, #bbf1fa, rgba(187, 241, 250, 0.3));
+  border-radius: 25% 25% 25% 25%;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  overflow: hidden;
+}
+
+.product-buy a:hover {
+  background-color: #663f3f;
+}
+
+.product-label {
+  font-size: 4vw;
+  text-align: center;
+  font-family: "montserrat";
+  width: 100%;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.btn-right {
+  right: 0;
+}
+
+.btn-left {
+  left: 0;
+}
+
+.btn-3 {
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #663f3f;
+  color: #fff;
+  font-size: 2.5vw;
+  font-family: 'Poppins', sans-serif;
+  border: 0.1vw solid #663f3f;
+  border-radius: 50%;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.btn-3:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #663f3f;
+}
+
+.btn-3:focus {
+  outline: none;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(#663f3f), to(rgba(102, 63, 63, 0.7)));
+  background: linear-gradient(to right, #663f3f, rgba(102, 63, 63, 0.7));
+  height: 183.8vh;
+}
+
+.colorfull-service {
+  background: -webkit-gradient(linear, left top, right top, from(#ec4646), to(rgba(236, 70, 70, 0.8)));
+  background: linear-gradient(to right, #ec4646, rgba(236, 70, 70, 0.8));
+  width: 100%;
+  height: 10vw;
+}
+
+.service-label {
+  font-size: 4vw;
+  text-align: center;
+  font-family: "montserrat";
+  width: 100%;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.service-style {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60vw;
+  height: 14vw;
+  left: 12.5vw;
+  margin: 1vw 0 2vw 0;
+  background: #51c2d5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6vw;
+}
+
+.service-style img {
+  position: relative;
+  border-radius: 6vw;
+  width: 20vw;
+  height: 14vw;
+  padding: 0;
+  margin: 0;
+}
+
+.service-detail {
+  position: relative;
+  left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30vw;
+  height: 14vw;
+  overflow: hidden;
+}
+
+.service-detail h1 {
+  position: relative;
+  height: 2.5vw;
+  width: 30vw;
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  font-family: "montserrat";
+  color: #fff;
+  background: #663f3f;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+.service-detail p {
+  position: relative;
+  height: 10vw;
+  margin-top: 1vw;
+  background: rgba(255, 255, 255, 0.8);
+  color: #663f3f;
+  overflow: hidden;
+  font-size: 1vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-buy {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  left: 65vw;
+}
+
+.service-buy a {
+  display: block;
+  text-align: center;
+  width: 10vw;
+  height: 10vw;
+  line-height: 10vw;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#51c2d5), to(rgba(81, 194, 213, 0.3)));
+  background: linear-gradient(to bottom, #51c2d5, rgba(81, 194, 213, 0.3));
+  border-radius: 25% 25% 25% 25%;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  overflow: hidden;
+}
+
+.service-buy a:hover {
+  background-color: #ec4646;
+}
+
+.btn-4 {
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #ec4646;
+  color: #fff;
+  font-size: 2.5vw;
+  font-family: 'Poppins', sans-serif;
+  border: 0.1vw solid #ec4646;
+  border-radius: 50%;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.btn-4:hover {
+  background-color: #51c2d5;
+  color: #663f3f;
+}
+
+.btn-4:focus {
+  outline: none;
+}
+
+.footer {
+  position: relative;
+  top: 100vh;
+  width: 100%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(#51c2d5), to(rgba(81, 194, 213, 0.2)));
+  background: linear-gradient(to right, #51c2d5, rgba(81, 194, 213, 0.2));
+  overflow: hidden;
+}
+
+.footer-links {
+  position: absolute;
+  width: 30vw;
+  height: 20vw;
+  z-index: 10;
+  top: 5vh;
+}
+
+.footer-links li {
+  position: relative;
+  background: #663f3f;
+  width: 15vw;
+  height: 5vw;
+  border: 0.1vw solid black;
+  margin-top: 1vw;
+  text-align: center;
+}
+
+.footer-links li a {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2vw;
+  line-height: 5vw;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  height: 10vh;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  height: 5vw;
+}
+
+.icons li {
+  position: relative;
+  width: 8vw;
+  height: 5vw;
+  left: 90vw;
+  margin: 4vh 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.icons a {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.icons img {
+  position: absolute;
+  right: 0;
+  width: 5vw;
+  height: 5vw;
+}
+
+.footer-label {
+  position: absolute;
+  width: 25vw;
+  height: 6vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.footer-label h1 {
+  background-color: #ec4646;
+  font-size: 2vw;
+  font-family: "montserrat";
+  text-align: center;
+  line-height: 6vw;
+  color: #fff;
+}
+
+.footer-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-form label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4vw;
+  margin-bottom: 1vw;
+  text-align: center;
+}
+
+.footer-form #email {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+  height: 2vw;
+  width: 30vw;
+}
+
+.footer-form #footer-submit {
+  position: relative;
+  background: #ec4646;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  width: 15vw;
+  height: 5vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.footer-form #footer-submit:focus {
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */

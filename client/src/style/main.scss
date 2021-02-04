@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+body{
+    
+    z-index: -10;
+    height: auto;
+    width: 100%;
+    
+   
+   
+}
+.product-display{
+
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    height:183.7vh; 
+  
+    
+
+}
+.service-display{
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    height: 183.7vh;
+    
+    
+}
+
+
+
+@import '_navbar';
+@import '_home';
+@import '_products';
+@import '_services';
+@import '_footer';

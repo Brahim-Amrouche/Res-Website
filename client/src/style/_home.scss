@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.display{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video-1{
+    position: absolute;
+
+    left: 0;
+    object-fit: cover;
+    opacity: 0.8;
+    
+    width: 50vw;
+    height: 101vh;
+}
+#background-video-2{
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    
+    object-fit: cover;
+    opacity: 0.8;
+
+    width: 50vw;
+    height: 101vh;
+}
+#description{
+
+    position: absolute;
+    top: 6rem;
+    left: 10vw;
+    width: 80vw;
+    height: 10vw;
+    text-align: center;
+    background:#51c2d5;
+    
+    
+    h1{
+        text-transform: capitalize;
+        font-size: 2.9vw;
+        color:#fff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        opacity: 0.9;
+        span{
+            font-size: 2.2vw;
+        }
+    }
+
+}
+#buy-products{
+    position: absolute;
+    top: 60vh;
+    left: 25vw;
+    z-index: 10;
+    width: 25vw;
+    height: 6vw;
+    transform: translateX(-50%);
+    a{
+        @extend .btn-2;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        line-height: 5.5vw;
+        font-size: 1.2vw;
+        border: 0.1vw solid #ec4646;
+        &:hover{
+            color: #ec4646;
+        }
+        &::before{
+            background: #ec4646;
+        }
+        &:hover::before{
+            left:100%;     
+            width: 0; 
+            border-radius: 0 0 0 0;
+        }
+        
+
+        
+    }
+}
+#buy-services{
+    position: absolute;
+    top: 60vh;
+    left: 75vw;
+   
+    z-index: 10;
+    width: 25vw;
+    height: 6vw;
+    transform: translateX(-50%);
+    a{
+        @extend .btn-2;
+    
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 1.2vw;
+        line-height: 5.5vw;
+        border: 0.1vw solid #663f3f;
+        &:hover{
+            color: #663f3f;
+        }
+        &::before{
+            background: #663f3f;
+        }
+        &:hover::before{
+                 
+            width: 0; 
+            border-radius: 0 0 0 0;
+        }
+
+    }
+}
+
+.btn-2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    background: none;
+    font-weight: bold;
+    color: #f2eaec;
+    cursor: pointer;
+    z-index: 2;
+    transition: 3s all;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+        z-index: -1;
+        transition: 1.5s;
+        top: 0;
+      
+    }
+    
+}
